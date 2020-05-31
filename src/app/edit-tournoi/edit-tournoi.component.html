@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>Edition tournoi</h1>
+  <div>
+    <div class="form-group">
+      <label>ID</label>
+      <input class="form-control" [(ngModel)]="tournoi.id" readonly placeholder="généré automatiquement">
+    </div>
+    <div class="form-group">
+      <label>Nom</label>
+      <input class="form-control" [(ngModel)]="tournoi.nom" required>
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" class="form-control" [(ngModel)]="tournoi.date">
+    </div>
+    <div class="form-group">
+      <label>Nombre de rondes</label>
+      <input type="number" class="form-control" [(ngModel)]="tournoi.nbRondes">
+    </div>
+    <div class="form-group">
+      <label>Salle</label>
+      <input class="form-control" [(ngModel)]="tournoi.salle">
+    </div>
+    <div class="form-group">
+      <label>Frais d'inscription</label>
+      <input type="number" class="form-control" [(ngModel)]="tournoi.fraisInscription">
+    </div>
+    <div class="form-group">
+      <label>Prix</label>
+      <input type="number" class="form-control" [(ngModel)]="tournoi.prix">
+    </div>
+    <div class="form-group">
+      <label>Cadence</label>
+      <input class="form-control" [(ngModel)]="tournoi.cadence">
+    </div>
+    <div class="form-group">
+      <label>Arbitre</label>
+      <input class="form-control" [(ngModel)]="tournoi.arbitre">
+    </div>
+    <div class="form-group">
+      <label>Organisateur</label>
+      <input class="form-control" [(ngModel)]="tournoi.organisateur">
+    </div>
+    <div class="form-group">
+      <label>Parties</label>
+      <input class="form-control" [(ngModel)]="tournoi.parties">
+    </div>
+    <div class="form-group">
+      <label>Participations</label>
+      <input class="form-control" [(ngModel)]="tournoi.participations">
+    </div>
+    <div>
+      <button class="btn btn-outline-success" (click)="save()">enregistrer</button>
+      <a [routerLink]="['/tournoi']" routerLinkActive="active" class="btn btn-outline-warning">annuler</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Edition club</h1>
+  <div>
+    <div class="form-group">
+      <label>ID</label>
+      <input class="form-control" [(ngModel)]="club.id" readonly placeholder="généré automatiquement">
+    </div>
+    <div class="form-group">
+      <label>Nom</label>
+      <input class="form-control" [(ngModel)]="club.nom" required>
+    </div>
+    <div>
+      <button class="btn btn-outline-success" (click)="save()">enregistrer</button>
+      <a [routerLink]="['/club']" routerLinkActive="active" class="btn btn-outline-warning">annuler</a>
+    </div>
+  </div>
+</div>
