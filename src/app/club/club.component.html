@@ -1,0 +1,22 @@
+<div class="container">
+  <a [routerLink]="['/club','edit']" class="btn btn-link">Nouveau club</a>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let c of clubs">
+      <td>{{c.id}}</td>
+      <td>{{c.nom}}</td>
+      <td>
+        <a class="btn btn-outline-info" [routerLink]="['/club/edit']" routerLinkActive="active"
+           [queryParams]="{id:c.id}">editer</a>
+      </td>
+      <td>
+        <button class="btn btn-outline-danger" (click)="delete(c.id)">supprimer</button>
+      </td>
+    </tr>
+  </table>
+</div>

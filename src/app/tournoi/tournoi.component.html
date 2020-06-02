@@ -1,0 +1,42 @@
+<div class="container">
+  <a [routerLink]="['/tournoi','edit']" class="btn btn-link">Nouveau tournoi</a>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Date</th>
+      <th>Nombre de rondes</th>
+      <th>Salle</th>
+      <th>Frais d'inscription</th>
+      <th>Prix</th>
+      <th>Cadence</th>
+      <th>Arbitre</th>
+      <th>Organisateur</th>
+      <th>Parties</th>
+      <th>Participations</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let t of tournois">
+      <td>{{t.id}}</td>
+      <td>{{t.nom}}</td>
+      <td>{{t.date}}</td>
+      <td>{{t.nbRondes}}</td>
+      <td>{{t.salle}}</td>
+      <td>{{t.fraisInscription}}</td>
+      <td>{{t.prix}}</td>
+      <td>{{t.cadence}}</td>
+      <td>{{t.arbitre}}</td>
+      <td>{{t.organisateur}}</td>
+      <td>{{t.parties}}</td>
+      <td>{{t.participations}}</td>
+      <td>
+        <a class="btn btn-outline-info" [routerLink]="['/tournoi/edit']" routerLinkActive="active"
+           [queryParams]="{id:t.id}">editer</a>
+      </td>
+      <td>
+        <button class="btn btn-outline-danger" (click)="delete(t.id)">supprimer</button>
+      </td>
+    </tr>
+  </table>
+</div>
