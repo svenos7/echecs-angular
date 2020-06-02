@@ -11,6 +11,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { EditTournoiComponent } from './edit-tournoi/edit-tournoi.component';
 import { HomeComponent } from './home/home.component';
 import { EditClubComponent } from './edit-club/edit-club.component';
+import {LoginModule} from "./login/login.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EditClubComponent } from './edit-club/edit-club.component';
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

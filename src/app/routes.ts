@@ -10,5 +10,6 @@ export const routes: Routes = [
   {path: 'tournoi', component: TournoiComponent},
   {path: 'tournoi/edit', component: EditTournoiComponent},
   {path: 'club', component: ClubComponent},
-  {path: 'club/edit', component: EditClubComponent}
+  {path: 'club/edit', component: EditClubComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'}
   ];

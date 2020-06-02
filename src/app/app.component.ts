@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'echecs-angular';
+
+  public get login() {
+    return sessionStorage.getItem('login');
+  }
+
+  public logout() {
+    sessionStorage.removeItem('user');
+    sessionStorage.removeItem('login');
+  }
 }
