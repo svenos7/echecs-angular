@@ -1,5 +1,5 @@
-import {Membre} from "./membre";
 import {Cadence} from "./cadence.enum";
+import {Membre} from "../membre/model/membre";
 
 export class Partie {
 
