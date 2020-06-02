@@ -1,4 +1,4 @@
-import {Tournoi} from "./tournoi";
+import {Tournoi} from "../tournoi/model/tournoi";
 import {Niveau} from "./niveau.enum";
 
 export class Arbitre {

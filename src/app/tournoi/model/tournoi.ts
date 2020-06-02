@@ -1,8 +1,8 @@
-import {Arbitre} from "./arbitre";
-import {Cadence} from "./cadence.enum";
-import {Club} from "./club";
-import {Partie} from "./partie";
-import {Participation} from "./participation";
+import {Arbitre} from "../../model/arbitre";
+import {Cadence} from "../../model/cadence.enum";
+import {Club} from "../../club/model/club";
+import {Partie} from "../../model/partie";
+import {Participation} from "../../model/participation";
 
 export class Tournoi {
 

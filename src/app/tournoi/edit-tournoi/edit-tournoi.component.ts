@@ -1,9 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
 import {Tournoi} from "../model/tournoi";
-import {TournoiService} from "../services/tournoi.service";
+import {TournoiService} from "../service/tournoi.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Cadence} from "../model/cadence.enum";
+import {Cadence} from "../../model/cadence.enum";
 
 @Component({
   selector: 'app-edit-tournoi',

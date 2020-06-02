@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TournoiService} from "../services/tournoi.service";
+import {TournoiService} from "../service/tournoi.service";
 import {Tournoi} from "../model/tournoi";
 
 @Component({
