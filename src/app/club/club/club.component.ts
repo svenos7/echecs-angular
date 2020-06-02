@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Club} from "../model/club";
-import {ClubService} from "../services/club.service";
+import {ClubService} from "../service/club.service";
 
 @Component({
   selector: 'app-club',
