@@ -26,7 +26,12 @@
       <td>{{t.fraisInscription}}</td>
       <td>{{t.prix}}</td>
       <td>{{t.cadence}}</td>
-      <td>{{t.arbitre}}</td>
+      <ng-container *ngIf="t.arbitre;else quelqueChose">
+        <td>{{t.arbitre.prenom}} {{t.arbitre.nom}}</td>
+      </ng-container>
+      <ng-template #quelqueChose>
+        <td></td>
+      </ng-template>
       <td>{{t.organisateur}}</td>
       <td>{{t.parties}}</td>
       <td>{{t.participations}}</td>
