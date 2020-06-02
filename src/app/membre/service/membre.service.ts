@@ -54,4 +54,20 @@ export class MembreService {
     }
     return this.httpClient.post(this.URL, o, this.options);
   }
+
+  public create(membre: Membre): Observable<any> {
+    this.initOption();
+    const o: object = {
+      'prenom': membre.prenom,
+      'nom': membre.nom,
+      'civilite': membre.civilite,
+      'nationalite': membre.nationalite,
+      'elo': membre.elo,
+      'adresse': membre.adresse,
+      'partieBlancs': membre.partieBlancs,
+      'partieNoirs': membre.partieNoirs,
+      'club': membre.club
+    }
+    return this.httpClient.post(this.URL, o, this.options);
+  }
 }

@@ -6,13 +6,15 @@ import {MembreService} from "./service/membre.service";
 import {InfosMembreComponent} from "./infos-membre/infos-membre.component";
 import {routeMembre} from "./routeMembre";
 import {HttpClientModule} from "@angular/common/http";
+import { EditMembreComponent } from './edit-membre/edit-membre.component';
+import {FormsModule} from "@angular/forms";
 
 
 
 @NgModule({
-  declarations: [MembreComponent, InfosMembreComponent],
+  declarations: [MembreComponent, InfosMembreComponent, EditMembreComponent],
   imports: [
-    CommonModule, RouterModule.forChild(routeMembre), HttpClientModule
+    CommonModule, RouterModule.forChild(routeMembre), HttpClientModule, FormsModule
   ],
   providers: [MembreService]
 })
