@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Tournoi} from "../model/tournoi";
 import {TournoiService} from "../services/tournoi.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Cadence} from "../model/cadence.enum";
 
 @Component({
   selector: 'app-edit-tournoi',
@@ -11,6 +12,9 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class EditTournoiComponent implements OnInit {
 
   private _tournoi: Tournoi = new Tournoi();
+
+  public cadence = Cadence;
+  public cadenceOptions = [];
 
   constructor(private tournoiService: TournoiService, private activatedRoute: ActivatedRoute, private router: Router) {
   }
@@ -24,6 +28,7 @@ export class EditTournoiComponent implements OnInit {
         }
       }
     );
+    this.cadenceOptions = Object.keys(this.cadence);
   }
 
 

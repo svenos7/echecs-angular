@@ -32,7 +32,12 @@
       <ng-template #quelqueChose>
         <td></td>
       </ng-template>
-      <td>{{t.organisateur}}</td>
+      <ng-container *ngIf="t.organisateur;else quelqueChose">
+        <td>{{t.organisateur.nom}}</td>
+      </ng-container>
+      <ng-template #quelqueChose>
+        <td></td>
+      </ng-template>
       <td>{{t.parties}}</td>
       <td>{{t.participations}}</td>
       <td>
