@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Connexion</h1>
+  <div *ngIf="erreur" class="alert alert-danger">Erreur d'authentification</div>
+  <div>
+    <form (ngSubmit)="connect()" [formGroup]="loginForm">
+      <div class="form-group">
+        <label>Identifiant :</label>
+        <input class="form-control" formControlName="login" [(ngModel)]="user.login">
+        <div *ngIf="loginCtrl.dirty&&loginCtrl.invalid" class="alert alert-warning">Identifiant nécessaire</div>
+      </div>
+      <div class="form-group">
+        <label>Mot de passe :</label>
+        <input class="form-control" formControlName="password" [(ngModel)]="user.password" type="password">
+        <div *ngIf="passwordCtrl.dirty&&passwordCtrl.invalid" class="alert alert-warning">
+          Mot de passe nécessaire
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-info" [disabled]="loginForm.invalid">Connection</button>
+        <a routerLink="/home" routerLinkActive="active" class="btn btn-outline-warning">Annuler</a>
+      </div>
+    </form>
+  </div>
+</div>
