@@ -5,6 +5,7 @@ import {EditTournoiComponent} from "./edit-tournoi/edit-tournoi.component";
 import {ClubComponent} from "./club/club.component";
 import {EditClubComponent} from "./edit-club/edit-club.component";
 
+
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'tournoi', component: TournoiComponent},

@@ -12,6 +12,7 @@ import { EditTournoiComponent } from './edit-tournoi/edit-tournoi.component';
 import { HomeComponent } from './home/home.component';
 import { EditClubComponent } from './edit-club/edit-club.component';
 import {LoginModule} from "./login/login.module";
+import {MembreModule} from "./membre/membre.module";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {LoginModule} from "./login/login.module";
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
-    LoginModule
+    LoginModule,
+    MembreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
