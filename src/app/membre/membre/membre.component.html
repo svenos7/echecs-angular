@@ -1,0 +1,31 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Civilité</th>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Nationalité</th>
+      <th>ELO</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let m of membres">
+      <td>{{m.id}}</td>
+      <td>{{m.civilite}}</td>
+      <td>{{m.prenom}}</td>
+      <td>{{m.nom}}</td>
+      <td>{{m.nationalite}}</td>
+      <td>{{m.elo}}</td>
+      <td><a classe="btn" [routerLink]="['/membre/infos']" routeurLinkActive="active" [queryParams]="{id:m.id}">Voir plus</a> </td>
+      <td>
+        <a class="btn btn-outline-info" [routerLink]="['/membre/edit']" routerLinkActive="active"
+           [queryParams]="{id:m.id}">editer</a>
+      </td>
+      <td>
+        <button class="btn btn-outline-danger" (click)="delete(m.id)">Supprimer</button>
+      </td>
+    </tr>
+  </table>
+</div>

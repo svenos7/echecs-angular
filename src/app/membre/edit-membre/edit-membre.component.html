@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>Edition membre</h1>
+  <div>
+    <div class="form-group" style="display: none;">
+      <label>ID</label>
+      <input class="form-control" [(ngModel)]="membre.id">
+    </div>
+    <div class="form-group">
+      <label>Civilité</label>
+      <input class="form-control" [(ngModel)]="membre.civilite">
+    </div>
+    <div class="form-group">
+      <label>Prénom</label>
+      <input class="form-control" [(ngModel)]="membre.prenom">
+    </div>
+    <div class="form-group">
+      <label>Nom</label>
+      <input  class="form-control" [(ngModel)]="membre.nom">
+    </div>
+    <div class="form-group">
+      <label>Nationalité</label>
+      <input class="form-control" [(ngModel)]="membre.nationalite">
+    </div>
+    <div class="form-group">
+      <label>ELO</label>
+      <input type="number" class="form-control" [(ngModel)]="membre.elo">
+    </div>
+    <div class="form-group">
+      <label>Club</label>
+      <input class="form-control" [(ngModel)]="membre.club">
+    </div>
+    <div>
+      <button class="btn btn-outline-success" (click)="save()">enregistrer</button>
+      <a [routerLink]="['/membre']" routerLinkActive="active" class="btn btn-outline-warning">annuler</a>
+    </div>
+  </div>
+</div>

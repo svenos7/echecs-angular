@@ -1,6 +1,6 @@
 import {Tournoi} from "../../tournoi/model/tournoi";
 import {Adresse} from "../../model/adresse";
-import {Membre} from "../../model/membre";
+import {Membre} from "../../membre/model/membre";
 
 export class Club {
 
