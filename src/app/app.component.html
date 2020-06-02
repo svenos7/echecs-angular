@@ -1,26 +1,29 @@
 <div style="background-color: lightgray">
   <div>
     <header class=" jumbotron jumbotron-fluid text-center text-dark mb-lg-0"
-            style="background-image: url('../assets/images/Echecs.jpg')">
-      <h2>.</h2>
-      <h5>.</h5>
+            style="background-image: url('../assets/images/Echecs.jpg'); background-size: cover;">
+      <br><br><br><br><br><br><br>
     </header>
   </div>
   <div>
-    <ng-container *ngIf="login;else nonConnecte">
-      <span>Bonjour {{login}} </span>
-      <div>
-        <a class="btn btn-link" [routerLink]="['/home']" routerLinkActive="active">Accueil</a>
-        <a class="btn btn-link" [routerLink]="['/club']" routerLinkActive="active">Club</a>
-        <a class="btn btn-link" [routerLink]="['/tournoi']" routerLinkActive="active">Tournoi</a>
-        <button class="btn btn-link" (click)="logout()">Déconnexion</button>
-      </div>
-    </ng-container>
-    <ng-template #nonConnecte>
-      <a class="btn btn-link" [routerLink]="['/home']" routerLinkActive="active">Accueil</a>
-      <a class="btn btn-link" [routerLink]="['/login']" routerLinkActive="active">Connexion</a>
-      <a class="btn btn-link" [routerLink]="['/inscription']" routerLinkActive="active">Inscription</a>
-    </ng-template>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <ng-container *ngIf="login;else nonConnecte">
+        <span>Bonjour {{login}} </span>
+        <div>
+          <a class="btn btn-link" [routerLink]="['/home']" routerLinkActive="active">Accueil</a>
+          <a class="btn btn-link" [routerLink]="['/club']" routerLinkActive="active">Club</a>
+          <a class="btn btn-link" [routerLink]="['/tournoi']" routerLinkActive="active">Tournoi</a>
+          <button class="btn btn-link" (click)="logout()">Déconnexion</button>
+        </div>
+      </ng-container>
+      <ng-template #nonConnecte>
+        <div>
+          <a class="btn btn-link" [routerLink]="['/home']" routerLinkActive="active">Accueil</a>
+          <a class="btn btn-link" [routerLink]="['/login']" routerLinkActive="active">Connexion</a>
+          <a class="btn btn-link" [routerLink]="['/inscription']" routerLinkActive="active">Inscription</a>
+        </div>
+      </ng-template>
+    </nav>
   </div>
 
   <router-outlet></router-outlet>

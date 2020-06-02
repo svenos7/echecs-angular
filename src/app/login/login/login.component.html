@@ -10,14 +10,35 @@
       </div>
       <div class="form-group">
         <label>Mot de passe :</label>
-        <input class="form-control" formControlName="password" [(ngModel)]="user.password" type="password">
+        <input id="pwd" class="form-control" formControlName="password" [(ngModel)]="user.password" type="password">
         <div *ngIf="passwordCtrl.dirty&&passwordCtrl.invalid" class="alert alert-warning">
           Mot de passe nécessaire
         </div>
+        <button class="btn btn-link" onclick="if (pwd.type == 'text') pwd.type = 'password'; else pwd.type = 'text';">
+          <svg class="bi bi-eye-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+            <path fill-rule="evenodd"
+                  d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+          </svg>
+        </button>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-outline-info" [disabled]="loginForm.invalid">Connection</button>
-        <a routerLink="/home" routerLinkActive="active" class="btn btn-outline-warning">Annuler</a>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-outline-primary" [disabled]="loginForm.invalid">
+          <svg class="bi bi-house-door-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+            <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+          </svg>
+        </button>
+        <a routerLink="/home" routerLinkActive="active" class="btn btn-outline-danger">
+          <svg class="bi bi-door-closed-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                  d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </a>
       </div>
     </form>
   </div>

@@ -13,6 +13,7 @@ import {map} from "rxjs/operators";
 export class InscriptionComponent implements OnInit {
   private _user: Login = new Login();
   private _erreur: boolean = false;
+  private _hide: boolean = true;
 
   private _inscriptionForm: FormGroup;
   private _loginCtrl: FormControl;
@@ -79,6 +80,14 @@ export class InscriptionComponent implements OnInit {
 
   set erreur(value: boolean) {
     this._erreur = value;
+  }
+
+  get hide(): boolean {
+    return this._hide;
+  }
+
+  set hide(value: boolean) {
+    this._hide = value;
   }
 
   get inscriptionForm(): FormGroup {
