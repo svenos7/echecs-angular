@@ -1,6 +1,8 @@
+import {Membre} from '../../membre/model/membre';
+
 export class Login {
 
-  constructor(private _login?: string, private _password?: string) {
+  constructor(private _login?: string, private _password?: string, private _membre?: Membre) {
   }
 
   get login(): string {
@@ -17,5 +19,13 @@ export class Login {
 
   set password(value: string) {
     this._password = value;
+  }
+
+  get membre(): Membre {
+    return this._membre;
+  }
+
+  set membre(value: Membre) {
+    this._membre = value;
   }
 }

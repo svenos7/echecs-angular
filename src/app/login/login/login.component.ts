@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Login} from "../model/login";
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {LoginService} from "../services/login.service";
-import {Router} from "@angular/router";
+import {Login} from '../model/login';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {LoginService} from '../services/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -30,10 +30,16 @@ export class LoginComponent implements OnInit {
   }
 
   connect() {
+
     this.loginService.login(this.user).subscribe(res => {
       sessionStorage.setItem('user', btoa(`${this.user.login}:${this.user.password}`));
       sessionStorage.setItem('login', this.user.login);
-      this.router.navigate(['/home']);
+      if (this.user.membre != null) {
+        this.router.navigate(['/home']);
+      } else {
+        this.router.navigate(['/contact']);
+      }
+
     }, error => {
       this.erreur = true;
     });
