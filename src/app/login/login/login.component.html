@@ -14,7 +14,7 @@
         <div *ngIf="passwordCtrl.dirty&&passwordCtrl.invalid" class="alert alert-warning">
           Mot de passe nécessaire
         </div>
-        <button class="btn btn-link" onclick="if (pwd.type == 'text') pwd.type = 'password'; else pwd.type = 'text';">
+        <button class="btn btn-link" type="button" onclick="if (pwd.type == 'text') pwd.type = 'password'; else pwd.type = 'text';">
           <svg class="bi bi-eye-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
