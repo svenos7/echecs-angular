@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Login} from "../model/login";
-import {Observable} from "rxjs";
+import {HttpClient} from '@angular/common/http';
+import {Login} from '../model/login';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,12 @@ export class InscriptionService {
   public inscription(user: Login): Observable<any> {
     const o = {
       login: user.login,
-      password: user.password
+      password: user.password,
+      membre: {
+        prenom: user.membre.prenom,
+        nom: user.membre.nom,
+        email: user.membre.email
+      }
     };
     return this.client.post(this.url, o);
   }

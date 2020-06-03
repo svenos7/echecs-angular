@@ -1,4 +1,4 @@
-<div style="background-color: lightgray">
+<div style="background-color: aliceblue">
   <div>
     <header class=" jumbotron jumbotron-fluid mb-0"
             style="background-image: url('../assets/images/Echecs.jpg'); background-size: cover;background-position: center">
@@ -14,7 +14,8 @@
           <a class="btn btn-link" [routerLink]="['/membre']" routerLinkActive="active">Membres</a>
           <a class="btn btn-link" [routerLink]="['/club']" routerLinkActive="active">Club</a>
           <a class="btn btn-link" [routerLink]="['/tournoi']" routerLinkActive="active">Tournoi</a>
-          <button class="btn btn-link" (click)="logout()">Déconnexion</button>
+          <button class="btn btn-link text-left" (click)="logout()" routerLink="/home" routerLinkActive="active">Déconnexion
+          </button>
         </div>
       </ng-container>
       <ng-template #nonConnecte>
@@ -37,7 +38,8 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active">Nous contacter</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active">Contacts</a>
+            </li>
             <li class="nav-item"><a class="nav-link" routerLink="/regles" routerLinkActive="active">Règles</a></li>
           </ul>
         </div>

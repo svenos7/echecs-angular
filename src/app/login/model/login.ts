@@ -2,7 +2,7 @@ import {Membre} from '../../membre/model/membre';
 
 export class Login {
 
-  constructor(private _login?: string, private _password?: string, private _membre?: Membre) {
+  constructor(private _membre: Membre = new Membre(), private _login?: string, private _password?: string) {
   }
 
   get login(): string {

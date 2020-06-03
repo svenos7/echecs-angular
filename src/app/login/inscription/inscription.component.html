@@ -1,4 +1,5 @@
 <div class="container">
+  <br>
   <h1>Inscription</h1>
   <div *ngIf="erreur" class="alert alert-danger">Certaines données sont incorrectes</div>
   <div>
@@ -13,7 +14,19 @@
           Cet identifiant est déjà utilisé
         </div>
       </div>
-      <div *ngIf="hide" class="form-group">
+      <div class="form-group">
+        <label>Prénom :</label>
+        <input class="form-control" formControlName="prenom" [(ngModel)]="user.membre.prenom">
+      </div>
+      <div class="form-group">
+        <label>Nom :</label>
+        <input class="form-control" formControlName="nom" [(ngModel)]="user.membre.nom">
+      </div>
+      <div class="form-group">
+        <label>Mail :</label>
+        <input class="form-control" formControlName="email" [(ngModel)]="user.membre.email">
+      </div>
+      <div class="form-group">
         <label>Mot de passe :</label>
         <input id="pwd" class="form-control" formControlName="password" [(ngModel)]="user.password" type="password">
         <div *ngIf="passwordCtrl.dirty&&passwordCtrl.hasError('required')" class="alert alert-danger">
@@ -22,7 +35,8 @@
         <div *ngIf="passwordCtrl.dirty&&passwordCtrl.hasError('pattern')" class="alert alert-warning">
           Le mot de passe doit contenir au moins 8 caractères dont une minuscule, une majuscule et un chiffre
         </div>
-        <button class="btn btn-link" type="button" onclick="if (pwd.type == 'text') pwd.type = 'password'; else pwd.type = 'text';">
+        <button class="btn btn-link" type="button"
+                onclick="if (pwd.type == 'text') pwd.type = 'password'; else pwd.type = 'text';">
           <svg class="bi bi-eye-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -40,7 +54,8 @@
         <div *ngIf="confirmeCtrl.dirty&&inscriptionForm.hasError('nonIdentique')" class="alert alert-warning">
           Les mots de passe ne sont pas identiques
         </div>
-        <button class="btn btn-link" type="button" onclick="if (cfm.type == 'text') cfm.type = 'password'; else cfm.type = 'text';">
+        <button class="btn btn-link" type="button"
+                onclick="if (cfm.type == 'text') cfm.type = 'password'; else cfm.type = 'text';">
           <svg class="bi bi-eye-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>

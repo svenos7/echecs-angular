@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Login} from "../model/login";
-import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {InscriptionService} from "../services/inscription.service";
-import {Router} from "@angular/router";
-import {map} from "rxjs/operators";
+import {Login} from '../model/login';
+import {AbstractControl, Form, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {InscriptionService} from '../services/inscription.service';
+import {Router} from '@angular/router';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-inscription',
@@ -19,6 +19,9 @@ export class InscriptionComponent implements OnInit {
   private _loginCtrl: FormControl;
   private _passwordCtrl: FormControl;
   private _confirmeCtrl: FormControl;
+  private _prenomCtrl: FormControl;
+  private _nomCtrl: FormControl;
+  private _mailCtrl: FormControl;
 
 
   constructor(private fb: FormBuilder, private inscriptionService: InscriptionService, private router: Router) {
@@ -26,10 +29,16 @@ export class InscriptionComponent implements OnInit {
     this.passwordCtrl = this.fb.control('', [Validators.required,
       Validators.pattern('((?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,})')]);
     this.confirmeCtrl = this.fb.control('', Validators.required);
+    this.prenomCtrl = this.fb.control('', Validators.required);
+    this.nomCtrl = this.fb.control('', Validators.required);
+    this.mailCtrl = this.fb.control('', Validators.required);
     this.inscriptionForm = this.fb.group({
       login: this.loginCtrl,
       password: this.passwordCtrl,
-      confirme: this.confirmeCtrl
+      confirme: this.confirmeCtrl,
+      prenom: this.prenomCtrl,
+      nom: this.nomCtrl,
+      email: this.mailCtrl
     }, {validator: InscriptionComponent.correspond});
   }
 
@@ -38,7 +47,7 @@ export class InscriptionComponent implements OnInit {
 
   inscription() {
     this.inscriptionService.inscription(this.user).subscribe(res => {
-      this.router.navigate(['/login'])
+      this.router.navigate(['/login']);
     }, error => {
       this.erreur = true;
     });
@@ -49,7 +58,7 @@ export class InscriptionComponent implements OnInit {
       if (res) {
         return null;
       }
-      return {'nonDisponible': true}
+      return {'nonDisponible': true};
     }));
   }
 
@@ -123,5 +132,27 @@ export class InscriptionComponent implements OnInit {
     this._confirmeCtrl = value;
   }
 
+  get prenomCtrl(): FormControl {
+    return this._prenomCtrl;
+  }
 
+  set prenomCtrl(value: FormControl) {
+    this._prenomCtrl = value;
+  }
+
+  get nomCtrl(): FormControl {
+    return this._nomCtrl;
+  }
+
+  set nomCtrl(value: FormControl) {
+    this._nomCtrl = value;
+  }
+
+  get mailCtrl(): FormControl {
+    return this._mailCtrl;
+  }
+
+  set mailCtrl(value: FormControl) {
+    this._mailCtrl = value;
+  }
 }
