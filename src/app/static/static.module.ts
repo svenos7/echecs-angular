@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import {RouterModule} from '@angular/router';
 import {routeStatic} from './routeStatic';
+import { ReglesComponent } from './regles/regles.component';
 
 
 
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [ContactComponent, ReglesComponent],
   imports: [
     CommonModule, RouterModule.forChild(routeStatic)
   ]
