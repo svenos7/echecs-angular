@@ -1,0 +1,244 @@
+<div class="container">
+  <h1 class="text-center">Règles du jeu d'échecs</h1>
+  <table>
+    <tr>
+      <td>
+        <h4>L'échiquier</h4>
+        <p>
+          L’échiquier se compose d’une grille 8×8 de 64 cases identiques alternativement claires (les cases “blanches”)
+          et foncées (les cases “noires”).<br>
+          L’échiquier est placé entre les joueurs de telle manière que la case d’angle à la droite de chaque joueur soit
+          blanche.<br>
+          Les huit lignes de cases verticales sont appelées “colonnes“. Les huit lignes de cases horizontales sont
+          appelées “rangées“.
+          Une ligne droite de cases de même couleur, menant d’un bord de l’échiquier à un bord adjacent, est appelée
+          “diagonale“.<br>
+          Les pièces blanches occupent toujours les rangées 1 et 2.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/pos_initiale.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <h4>Le but du jeu</h4>
+  <p>
+    L’objectif de chaque joueur est de placer le roi adverse “sous une attaque” de telle manière que l’adversaire n’ait
+    aucun coup légal.<br>
+    On dit que le joueur qui atteint ce but a “maté” le roi adverse et gagné la partie. Laisser son roi sous une
+    attaque,
+    exposer son roi à une attaque et aussi “prendre” le roi adverse n’est pas autorisé.<br>
+    L’adversaire dont le roi a été maté a perdu la partie. Si la position est telle qu’aucun des deux joueurs n’a la
+    possibilité de mater, la partie est nulle.
+  </p>
+  <br>
+  <h4>Le déplacement des pièces</h4>
+  <table>
+    <tr>
+      <td>
+        <h5>Le pion</h5>
+        <p>
+          Le pion se déplace sur la case inoccupée immédiatement devant lui sur la même colonne, ou à son premier coup,
+          il peut se déplacer comme précédemment ou bien avancer de deux cases sur la même colonne à condition qu’elles
+          soient toutes deux inoccupées, ou il se déplace sur une case occupée par une pièce adverse, située devant lui
+          en diagonale sur une colonne adjacente, et capture ainsi cette pièce.<br>
+          Voir aussi la promotion du pion et la prise en passant plus bas.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/pion.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h5>Le cavalier</h5>
+        <p>
+          Le cavalier se déplace sur l’une des cases les plus proches de celle sur laquelle il se trouve, mais pas sur
+          la même colonne, rangée ou diagonale.<br>
+          Il fait un bond de 3 trois cases en faisant un “L”. Il change à chaque fois de couleur de case.<br>
+          Il est le seul à sauter par dessus les autres.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/cavalier.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h5>Le fou</h5>
+        <p>
+          Le fou se déplace sur toute case d’une diagonale sur laquelle il se trouve. Il y a donc un fou de cases
+          blanches et un fou de cases noires. Souvent la paire de fous peut constituer une arme très puissante.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/fou.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h5>La tour</h5>
+        <p>
+          La tour se déplace sur toute case de la colonne ou de la rangée sur laquelle elle se trouve.
+          De par sa situation dans la position initiale de la partie c’est une pièce qu’on retrouve souvent dans les
+          finales de partie.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/tour.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h5>La dame</h5>
+        <p>
+          La dame se déplace sur toute case de la colonne, de la rangée ou d’une diagonale sur laquelle elle se
+          trouve. Elle est donc la pièce la plus puissante du jeu d’échecs.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/dame.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h5>Le roi</h5>
+        <p>
+          Il y a deux façons différentes de déplacer le roi, soit par un mouvement sur l’une des cases adjacentes qui
+          n’est pas attaquée par une ou plusieurs pièces adverses soit par le “roque” (voir les règles
+          particulières).<br>
+          Quand le roi est menacé par une pièce il y a “échec au roi”.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/roi.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <h4>Les règles particulières</h4>
+  <h5>Le roque</h5>
+  <p>
+    C’est un mouvement du roi et de l’une ou l’autre des tours de la même couleur, sur la première rangée du joueur,
+    comptant pour un seul coup du roi et effectué de la manière suivante : le roi est déplacé de deux cases à partir
+    de sa case initiale en direction de la tour sur sa case initiale; cette tour est ensuite déplacée sur la dernière
+    case que le roi vient de traverser.<br>
+    Le droit de roquer est perdu : si le roi a déjà bougé, ou avec une tour qui a déjà bougé.<br>
+    Le roque est momentanément empêché :<br>
+    si la case sur laquelle se trouve le roi, ou celle qu’il doit franchir, ou encore celle qu’il doit occuper, est
+    attaquée par une ou plusieurs pièces adverses, ou<br>
+    si une pièce quelconque se trouve entre le roi et la tour avec laquelle le roque doit être effectué.
+  </p>
+  <table>
+    <tr>
+      <td>
+        <img src="../../../assets/images/roque1.jpg" style="width: 250px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+      <td>
+        <img src="../../../assets/images/roque2.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h5>La promotion du pion</h5>
+        <p>
+          Quand un pion accède à la rangée la plus éloignée de sa position de départ, il doit être échangé, comme
+          partie intégrante du coup sur la même case, contre une nouvelle dame, tour, fou ou cavalier de la couleur du
+          pion.<br>
+          Le joueur ne doit pas limiter son choix aux pièces qui ont été précédemment capturées. Cet échange d’un pion
+          contre une autre pièce est appelé “promotion” et la pièce promue est immédiatement opérationnelle.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/promotion.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <h5>La prise en passant</h5>
+  <p>
+    Un pion attaquant une case traversée par un pion adverse qui a avancé, d’un seul coup, de deux cases à partir
+    de sa case initiale peut prendre ce pion comme si ce dernier n’avait avancé que d’une case.<br>
+    Cette prise n’est légale qu’en réponse immédiate à cette avancée de deux cases du pion adverse. On l’appelle :
+    “prise en passant”.
+  </p>
+  <table>
+    <tr>
+      <td>
+        <img src="../../../assets/images/prise_en_passant1.jpg" style="width: 250px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+      <td>
+        <img src="../../../assets/images/prise_en_passant2.jpg" style="width: 250px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+      <td>
+        <img src="../../../assets/images/prise_en_passant3.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <h4>La fin de la partie</h4>
+  <table>
+    <tr>
+      <td>
+        <h5>La victoire</h5>
+        <p>
+          La partie est gagnée par le joueur qui a maté le roi adverse. Ceci met immédiatement fin à la partie à
+          condition que le coup produisant la position d’échec et mat soit légal.<br>
+          La partie est gagnée par le joueur dont l’adversaire déclare qu’il abandonne. Ceci met immédiatement fin à
+          la partie.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/mat.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <h5>La partie nulle</h5>
+        <p>
+          La partie est nulle lorsque le joueur ayant le trait n’a aucun coup légal et que son roi n’est pas en
+          échec. On dit alors que la partie se termine par un “pat” . Ceci met immédiatement fin à la partie à condition
+          que le coup produisant la position de pat soit légal.<br>
+          La partie est nulle quand une position est telle qu’aucun joueur ne peut mater le roi adverse avec une
+          série de coups légaux. On dit que la partie se termine “position morte”. Ceci met fin immédiatement à la
+          partie à
+          condition que le coup produisant la position soit légal.<br>
+          La partie est nulle si les deux joueurs le décident d’un commun accord pendant la partie. Ceci met
+          immédiatement fin à la partie.<br>
+          La partie peut être nulle si une position identique est sur le point de survenir ou vient de survenir au
+          moins trois fois sur l’échiquier.<br>
+          La partie peut être nulle si chaque joueur a joué au moins les 50 derniers coups consécutifs sans aucun
+          mouvement de pion ni aucune prise.
+        </p>
+      </td>
+      <td>
+        <img src="../../../assets/images/nulle.jpg" style="width: 250px">
+      </td>
+    </tr>
+  </table>
+</div>
