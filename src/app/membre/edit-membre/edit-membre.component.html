@@ -1,4 +1,5 @@
 <div class="container">
+  <br>
   <h1>Edition membre</h1>
   <div>
     <div class="form-group" style="display: none;">
@@ -7,7 +8,9 @@
     </div>
     <div class="form-group">
       <label>Civilité</label>
-      <input class="form-control" [(ngModel)]="membre.civilite">
+      <select id="civilite" class="form-control" [(ngModel)]="membre.civilite">
+        <option *ngFor="let m of civiliteOptions" [value]="m" [label]="_civilite[m]">{{[m]}}</option>
+      </select>
     </div>
     <div class="form-group">
       <label>Prénom</label>
@@ -18,8 +21,14 @@
       <input  class="form-control" [(ngModel)]="membre.nom">
     </div>
     <div class="form-group">
+      <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" [(ngModel)]="membre.email">
+      </div>
       <label>Nationalité</label>
-      <input class="form-control" [(ngModel)]="membre.nationalite">
+      <select class="form-control" [(ngModel)]="membre.nationalite">
+        <option *ngFor="let n of nationaliteOptions" [value]="n" [label]="_nationalite[n]">{{[n]}}</option>
+      </select>
     </div>
     <div class="form-group">
       <label>ELO</label>
@@ -30,8 +39,9 @@
       <input class="form-control" [(ngModel)]="membre.club">
     </div>
     <div>
-      <button class="btn btn-outline-success" (click)="save()">enregistrer</button>
-      <a [routerLink]="['/membre']" routerLinkActive="active" class="btn btn-outline-warning">annuler</a>
+      <button class="btn btn-info" (click)="save()">Sauvegarder</button>&nbsp;
+       <a class="btn btn-outline-dark" [routerLink]="['/membre']" routerLinkActive="active">Annuler</a>
     </div>
+    <br>
   </div>
 </div>

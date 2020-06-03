@@ -3,6 +3,7 @@ import {Membre} from "../model/membre";
 import {Civilite} from "../model/civilite.enum";
 import {MembreService} from "../service/membre.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Nationalite} from "../model/nationalite.enum";
 
 @Component({
   selector: 'app-edit-membre',
@@ -21,8 +22,10 @@ export class EditMembreComponent implements OnInit {
     this._membre = value;
   }
 
+  public _nationalite = Nationalite;
+  public nationaliteOptions = [];
 
-  private _civilite = Civilite;
+  public _civilite = Civilite;
   public civiliteOptions = [];
 
   constructor(private membreService: MembreService, private activatedRoute: ActivatedRoute, private router: Router) { }
@@ -34,9 +37,9 @@ export class EditMembreComponent implements OnInit {
           this._membre = data;
         })
       }
-
     });
     this.civiliteOptions = Object.keys(this._civilite);
+    this.nationaliteOptions = Object.keys(this._nationalite);
   }
 
   public save() {

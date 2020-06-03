@@ -27,6 +27,10 @@ export class MembreService {
     this.initOption();
     return this.httpClient.get<Array<Membre>>(this.URL, this.options);
   }
+  public infos(id: number): Observable<Array<number>> {
+    this.initOption();
+    return this.httpClient.get<Array<number>>(this.URL + '/infos/' + id, this.options)
+  }
 
   public findById(id: number): Observable<Membre> {
     this.initOption();
@@ -46,12 +50,13 @@ export class MembreService {
       'civilite': membre.civilite,
       'nationalite': membre.nationalite,
       'elo': membre.elo,
+      'email': membre.email,
       'adresse': membre.adresse,
       'partieBlancs': membre.partieBlancs,
       'partieNoirs': membre.partieNoirs,
       'club': membre.club
     }
-    return this.httpClient.post(this.URL, o, this.options);
+    return this.httpClient.put(this.URL + '/' + membre.id, o, this.options);
   }
 
   public create(membre: Membre): Observable<any> {
@@ -62,6 +67,7 @@ export class MembreService {
       'civilite': membre.civilite,
       'nationalite': membre.nationalite,
       'elo': membre.elo,
+      'email': membre.email,
       'adresse': membre.adresse,
       'partieBlancs': membre.partieBlancs,
       'partieNoirs': membre.partieNoirs,

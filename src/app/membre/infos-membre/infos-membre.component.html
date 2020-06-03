@@ -1,8 +1,128 @@
 <div class="container">
-  <h1></h1>
-  <div>
-    <div>
-      <a [routerLink]="['/membre']" routerLinkActive="active" class="btn btn-outline-warning">annuler</a>
+  <br>
+  <h1>{{membre.prenom}} {{membre.nom}}</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Prénom</h5>
+          <p class="card-text">{{membre.prenom}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Nom</h5>
+          <p class="card-text">{{membre.nom}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Civilité</h5>
+          <p class="card-text">
+            <option [label]="_civilite[membre.civilite]">{{membre.civilite}}</option>
+           </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Nationalité</h5>
+          <p class="card-text">
+            <option [label]="_nationalite[membre.nationalite]">{{membre.nationalite}}</option>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Classement ELO actuel</h5>
+          <p class="card-text">{{membre.elo}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Club</h5>
+          <p class="card-text">{{membre.club}}</p>
+        </div>
+      </div>
     </div>
   </div>
+  <br>
+  <div class="container">
+    <br>
+    <h1>Statistiques</h1>
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Meilleur classement ELO atteint</h5>
+            <p class="card-text">{{infosMembre[0]}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de parties jouées</h5>
+            <p class="card-text">{{infosMembre[1]}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de victoires</h5>
+            <p class="card-text">{{infosMembre[2]}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de matchs nuls</h5>
+            <p class="card-text">{{infosMembre[3]}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Nombre de défaites</h5>
+            <p class="card-text">{{infosMembre[4]}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Pourcentage de victoires</h5>
+            <p class="card-text">{{infosMembre[5]}} %</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Participations en tournoi</h5>
+            <p class="card-text">{{infosMembre[6]}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <div class="text-center">
+      <a [routerLink]="['/membre']" routerLinkActive="active" class="btn btn-outline-info">Retour</a>
+  </div>
+  <br>
 </div>
