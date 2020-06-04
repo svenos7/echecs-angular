@@ -9,7 +9,7 @@
     <div class="form-group">
       <label>Civilité</label>
       <select id="civilite" class="form-control" [(ngModel)]="membre.civilite">
-        <option *ngFor="let m of civiliteOptions" [value]="m" [label]="_civilite[m]">{{[m]}}</option>
+        <option *ngFor="let m of civiliteOptions" [value]="m" [label]="_civilite[m]">{{_civilite[m]}}</option>
       </select>
     </div>
     <div class="form-group">
@@ -27,7 +27,7 @@
       </div>
       <label>Nationalité</label>
       <select class="form-control" [(ngModel)]="membre.nationalite">
-        <option *ngFor="let n of nationaliteOptions" [value]="n" [label]="_nationalite[n]">{{[n]}}</option>
+        <option *ngFor="let n of nationaliteOptions" [value]="n" [label]="_nationalite[n]">{{_nationalite[n]}}</option>
       </select>
     </div>
     <div class="form-group">
