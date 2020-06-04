@@ -36,4 +36,12 @@ export class MembreComponent implements OnInit {
     });
   }
 
+  public get login() {
+    return sessionStorage.getItem('login');
+  }
+
+  public get role() {
+    return sessionStorage.getItem('role');
+  }
+
 }

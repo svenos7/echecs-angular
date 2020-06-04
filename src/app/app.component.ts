@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +15,12 @@ export class AppComponent {
   public logout() {
     sessionStorage.removeItem('user');
     sessionStorage.removeItem('login');
+    sessionStorage.removeItem('role');
   }
+
+  public get role() {
+    return sessionStorage.getItem('role');
+  }
+
+
 }

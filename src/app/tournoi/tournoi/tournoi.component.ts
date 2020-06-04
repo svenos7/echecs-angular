@@ -38,4 +38,8 @@ export class TournoiComponent implements OnInit {
     });
   }
 
+  public get role() {
+    return sessionStorage.getItem('role');
+  }
+
 }

@@ -17,14 +17,26 @@
       <div class="form-group">
         <label>Prénom :</label>
         <input class="form-control" formControlName="prenom" [(ngModel)]="user.membre.prenom">
+        <div *ngIf="prenomCtrl.dirty&&prenomCtrl.hasError('required')" class="alert alert-danger">
+          Veuillez indiquer votre prénom
+        </div>
       </div>
       <div class="form-group">
         <label>Nom :</label>
         <input class="form-control" formControlName="nom" [(ngModel)]="user.membre.nom">
+        <div *ngIf="nomCtrl.dirty&&nomCtrl.hasError('required')" class="alert alert-danger">
+          Veuillez indiquer votre nom
+        </div>
       </div>
       <div class="form-group">
         <label>Mail :</label>
         <input class="form-control" formControlName="email" [(ngModel)]="user.membre.email">
+        <div *ngIf="mailCtrl.dirty&&mailCtrl.hasError('required')" class="alert alert-danger">
+          Veuillez informer votre adresse e-mail
+        </div>
+        <div *ngIf="mailCtrl.dirty&&mailCtrl.hasError('email')" class="alert alert-warning">
+          Cette adresse e-mail est invalide
+        </div>
       </div>
       <div class="form-group">
         <label>Mot de passe :</label>

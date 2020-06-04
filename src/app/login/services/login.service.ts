@@ -16,6 +16,6 @@ export class LoginService {
       'Content-Type': 'application/json',
       'Authorization': 'Basic ' + btoa(`${user.login}:${user.password}`)
     });
-    return this.client.get('http://localhost:8080/echecs/rest/login', {headers: headers});
+    return this.client.get(`http://localhost:8080/echecs/rest/login/${user.login}`, {headers: headers});
   }
 }

@@ -38,4 +38,8 @@ export class ClubComponent implements OnInit {
     });
   }
 
+  public get role() {
+    return sessionStorage.getItem('role');
+  }
+
 }

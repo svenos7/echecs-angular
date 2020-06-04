@@ -34,12 +34,9 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.user).subscribe(res => {
       sessionStorage.setItem('user', btoa(`${this.user.login}:${this.user.password}`));
       sessionStorage.setItem('login', this.user.login);
-      if (this.user.membre != null) {
-        this.router.navigate(['/home']);
-      } else {
-        this.router.navigate(['/contact']);
-      }
-
+      this.user = res;
+      sessionStorage.setItem('role', this.user.roles[0].role);
+      this.router.navigate(['/home']);
     }, error => {
       this.erreur = true;
     });

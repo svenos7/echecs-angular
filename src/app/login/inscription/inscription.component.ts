@@ -31,7 +31,7 @@ export class InscriptionComponent implements OnInit {
     this.confirmeCtrl = this.fb.control('', Validators.required);
     this.prenomCtrl = this.fb.control('', Validators.required);
     this.nomCtrl = this.fb.control('', Validators.required);
-    this.mailCtrl = this.fb.control('', Validators.required);
+    this.mailCtrl = this.fb.control('', [Validators.required, Validators.email]);
     this.inscriptionForm = this.fb.group({
       login: this.loginCtrl,
       password: this.passwordCtrl,
