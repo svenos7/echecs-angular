@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Club} from "../model/club";
 import {ClubService} from "../service/club.service";
+import {Adresse} from "../../model/adresse";
 
 @Component({
   selector: 'app-edit-club',

@@ -4,11 +4,12 @@ import {Membre} from "../../membre/model/membre";
 
 export class Club {
 
-  constructor(private _id?: number,
-              private _nom?: string,
-              private _adresse?: Adresse,
-              private _membres?: Membre[],
-              private _tournois?: Tournoi[]) {
+  constructor(
+    private _adresse: Adresse = new Adresse(),
+    private _id?: number,
+    private _nom?: string,
+    private _membres?: Membre[],
+    private _tournois?: Tournoi[]) {
   }
 
   get id(): number {
