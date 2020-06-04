@@ -8,7 +8,7 @@
   <div>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <ng-container *ngIf="login;else nonConnecte">
-        <span class="text-light">Bonjour {{login}} ({{role}}) </span>&nbsp;
+        <span class="text-light">Bonjour {{login}} ({{affichageRole(role)}}) </span>&nbsp;
         <div>
           <a class="btn btn-link" [routerLink]="['/home']" routerLinkActive="active">Accueil</a>
           <a class="btn btn-link" [routerLink]="['/membre']" routerLinkActive="active">Membres</a>

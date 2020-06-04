@@ -22,5 +22,15 @@ export class AppComponent {
     return sessionStorage.getItem('role');
   }
 
+  public affichageRole(role: string): string {
+    if (role === 'ROLE_ADMIN') {
+      return 'Administrateur';
+    } else if (role === 'ROLE_MODO') {
+      return 'Modérateur';
+    } else {
+      return 'Utilisateur';
+    }
+  }
+
 
 }
