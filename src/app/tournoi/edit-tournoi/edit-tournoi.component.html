@@ -35,22 +35,22 @@
         <option *ngFor="let c of cadenceOptions" [value]="c" [label]="cadence[c]">{{[c]}}</option>
       </select>
     </div>
-    <div class="form-group">
-      <label>Arbitre</label>
-      <input class="form-control" [(ngModel)]="tournoi.arbitre">
-    </div>
-    <div class="form-group">
-      <label>Organisateur</label>
-      <input class="form-control" [(ngModel)]="tournoi.organisateur">
-    </div>
-    <div class="form-group">
-      <label>Parties</label>
-      <input class="form-control" [(ngModel)]="tournoi.parties">
-    </div>
-    <div class="form-group">
-      <label>Participations</label>
-      <input class="form-control" [(ngModel)]="tournoi.participations">
-    </div>
+    <!--    <div class="form-group">
+         <label>Arbitre</label>
+         <input class="form-control" [(ngModel)]="tournoi.arbitre">
+       </div>
+       <div class="form-group">
+         <label>Organisateur</label>
+         <input class="form-control" [(ngModel)]="tournoi.organisateur">
+       </div>
+      <div class="form-group">
+         <label>Parties</label>
+         <input class="form-control" [(ngModel)]="tournoi.parties">
+       </div>
+       <div class="form-group">
+         <label>Participations</label>
+         <input class="form-control" [(ngModel)]="tournoi.participations">
+       </div> -->
     <div class="text-center">
       <button class="btn btn-outline-success" (click)="save()">
         <svg class="bi bi-check2-square" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor"
